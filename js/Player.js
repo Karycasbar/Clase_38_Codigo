@@ -52,7 +52,7 @@ class Player {
     });
   }
 
-  static getPlayersInfo() {
+  static getPlayersInfo() {   //Obtenemos los detalles del jugador en la BD usando el static, para obtener su información, pero no vamos a involucar ningun objeto en particular
     var playerInfoRef = database.ref("players");
     playerInfoRef.on("value", data => {
       allPlayers = data.val();
